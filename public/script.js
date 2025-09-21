@@ -1,14 +1,11 @@
 const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true,
-    lerp:0.06,
-   
+  el: document.querySelector('#main'),
   smooth: true,
   smartphone: {
-    smooth: true,
+    smooth: false
   },
   tablet: {
-    smooth: true,
+    smooth: false
   }
 });
 
