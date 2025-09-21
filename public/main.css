@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%; 
+    min-height: 100%;
+  height: auto;
+  overflow-y: auto; /    
+}
+
+
+
+nav{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    padding: 40px 80px;
+    justify-content: right;
+}
+
+nav #nav-part2 a{
+    text-decoration: none;
+    color: antiquewhite;
+    position: relative;
+    z-index: 10;
+}
+
+
+nav #nav-part2 #inc{
+    font-size: 20px;
+    border: 1px solid rgba(174, 170, 170, 0);
+    padding: 10px 10px;
+    border-radius: 50px;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    font-weight: normal;
+}
+
+#nav-part2 h1::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #697565;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+
+#nav-part2 h1:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h1:hover a{
+    color: beige;
+}
+
+#gallery-cont {
+    position: absolute;
+    padding: 40px 80px;
+    top:  27%;
+}
+
+#gallery-cont #gallery{
+    font-size: 20px;
+    border: 1px solid rgba(174, 170, 170, 0);
+    padding: 10px 10px;
+    border-radius: 50px;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    font-weight: normal;
+    transition: all ease 0.3s;
+}
+
+#gallery-cont #gallery::after{
+     content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #697565;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.3s;
+}
+#gallery-cont #gallery:hover a{
+    color: beige;
+}
+
+#gallery-cont #gallery:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+
+#gallery-cont #gallery a{
+    text-decoration: none;
+    color: antiquewhite;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+/*PAGE 1 */
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #181C14;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+#page1 .left h2{
+    font-size: 30px;
+    color: rgb(200, 200, 194);
+    text-align: right;
+}
+
+#page1 .right h1{
+    font-size: 7vw;
+    color: white;
+    text-align: left;
+    line-height: 5vw;
+    font-family: "Freight Big Pro";
+    font-weight: 200;
+    letter-spacing: 4.5px;
+}
+
+
+@media(max-width: 768px){
+    #page1{
+    flex-direction: column; 
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+
+  }
+
+  #page1 .left h2{
+    font-size: 15px;
+
+    text-align: center;
+}
+
+    #page1 .right h1{
+    font-size: 60px;
+    color: beige;
+    text-align: left;
+    line-height: 12vw;
+}
+
+nav{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    padding: 30px 30px;
+    justify-content: right;
+}
+    
+}
+
+/*PAGE 2 */
+
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #3C3D37;
+    display: inline-block;
+   
+}
+#page2 #cret-pro{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#page2 #cret-pro #cret{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%; 
+}
+#page2 #cret-pro h1{
+    font-size: 35px;
+    padding-top: 2px;
+    font-weight: normal;
+    text-align: center;
+    color: rgb(200, 200, 194);
+}
+#page2 #cret-pro h2{
+    font-size: 26px;
+    padding-top: 2px;
+    color: rgb(250, 250, 250);
+    line-height: 1.5vw;
+}
+#page2 #cret-pro p{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(200, 200, 194);
+    padding-top: 10px;
+}
+
+#pic-cont{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 50px;
+}
+
+#pic-cont img{
+    height: 20vw;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px){
+    #page2 #cret-pro #cret{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%; 
+}
+#page2 #cret-pro h1{
+    font-size: 30px;
+    padding-top: 2px;
+    font-weight: normal;
+    text-align: center;
+}
+#page2 #cret-pro h2{
+    line-height: 4.0vw;
+    font-size: 20px;
+    padding-top: 2px;
+
+}
+#page2 #cret-pro p{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#pic-cont{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 15px;
+    gap: 2px;
+    padding-top: 18px;
+}
+
+#pic-cont img{
+    margin: 30px;
+    min-height: 50vw;
+    border-radius: 30px;
+    
+    border: 1px solid whitesmoke;
+}
+}
+
+#page2-padding{
+    padding-top: 20px;
+}
+
+
+
+/*PAGE 3 */
+
+
+#page3{
+    min-height: 75vh;
+    width: 100%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#page3 #moving-pic .hpic{
+    height: 30vw;   
+    margin: 1vw;
+    border-radius: 2vw;
+    border: 1px solid whitesmoke;
+    max-height: 60vh;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+#page3 #moving-pic{
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 20px;
+    padding-top: 30px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+#page3 #moving-pic::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media (max-width: 768px){
+    #page3{
+    min-height: 50vh;
+    width: 100%;
+}
+    #page3 #moving-pic .hpic{
+    height: 50vw;   
+    margin: 1vw;
+    border-radius: 2vw;
+    border: 1px solid whitesmoke;
+}
+}
+
+#footer{
+    display: inline-block;
+    height: 16vh; 
+    width: 100%;   
+}
+
+#footer #disclaimer{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 15px;
+}
+#footer #cr{
+    font-size: 20px;
+    margin-top: 10px;  
+    text-align: center;  
+}
+
+#in-h1{
+    text-align: center;
+    padding-top: 7vw;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+}
+
+
+
+#incentive {
+    text-align: center;
+    padding: 10px 10px;
+    padding-top: 20px;
+    font-weight: normal;
+}
+
+
+#pg1{
+    background-color: #8086584b;
+}
+#ga-he{
+    color: #4c4f34;
+    text-align: center;
+    font-size: 5vw;
+    padding: 30px ;
+    font-family: "Freight Big Pro";
+    font-weight: normal;
+}
+
+#my-ga{
+    display: flex;
+    gap:12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ga-pic{
+    height: 25vw;
+    border-radius: 40px;
+    
+}
+
+@media (max-width: 768px){
+    .ga-pic{
+    height: 55vw;
+    border-radius: 30px;
+    
+    padding: 10px 10px;
+}
+}
+
+.dre{
+    color: #808658;
+}
