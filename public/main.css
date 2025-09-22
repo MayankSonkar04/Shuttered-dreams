@@ -19,7 +19,7 @@ nav{
     position: absolute;
     width: 100%;
     padding: 40px 80px;
-    justify-content: right;
+    justify-content:space-between;
 }
 
 nav #nav-part2 a{
@@ -62,11 +62,7 @@ nav #nav-part2 #inc{
     color: beige;
 }
 
-#gallery-cont {
-    position: absolute;
-    padding: 40px 80px;
-    top:  27%;
-}
+
 
 #gallery-cont #gallery{
     font-size: 20px;
