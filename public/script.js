@@ -1,15 +1,17 @@
-  const lenis = new Lenis({
-    duration: 1.2, // smooth speed
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing curve
-    smoothWheel: true, // smooth mouse wheel
-    smoothTouch: true  // smooth touch scrolling (mobile)
-  });
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true,
+  lerp:0.06,
 
-  // RAF loop
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  smooth: true,
+  smartphone: {
+    smooth: true,
+  },
+  tablet: {
+    smooth: true,
   }
+});
 
-  requestAnimationFrame(raf);
-
+window.addEventListener("load", () => {
+  scroll.update();  
+});
