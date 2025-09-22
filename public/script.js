@@ -1,15 +1,15 @@
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('#main'),
-  smooth: true,
-  smartphone: {
-    smooth: false
-  },
-  tablet: {
-    smooth: false
-  }
-});
+  const lenis = new Lenis({
+    duration: 1.2, // smooth speed
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing curve
+    smoothWheel: true, // smooth mouse wheel
+    smoothTouch: true  // smooth touch scrolling (mobile)
+  });
 
-window.addEventListener("load", () => {
-  scroll.update();  
-});
+  // RAF loop
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
 
